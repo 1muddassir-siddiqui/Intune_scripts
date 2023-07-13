@@ -3,7 +3,8 @@ $confirmation = Read-Host "This action will wipe your PC and restore it to facto
 
 if ($confirmation -eq "Y" -or $confirmation -eq "y") {
     # Initiate the factory reset
-    Reset-Computer -Confirm -FactoryReset
+    $arguments = "/Reset /Quiet"
+    Start-Process -FilePath "systemreset.exe" -ArgumentList $arguments -Wait
     Write-Host "Factory reset initiated. Your PC will now restart and reset to factory settings."
 } else {
     Write-Host "Factory reset cancelled."
