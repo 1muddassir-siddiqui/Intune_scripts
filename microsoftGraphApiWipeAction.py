@@ -50,7 +50,7 @@ def lambda_handler(event, context):
     response = requests.post(graph_api_url, headers=headers, json=payload)
 
     # Handle the API response
-    if response.status_code == 200:
+    if response.status_code == 202:
         print('Intune action successful')
     else:
         print(f'Error: {response.status_code}, {response.text}')
