@@ -27,7 +27,7 @@ def lambda_handler(event, context):
     client_secret = "MY_CLIENT_SECRET"
     tenant_id = "MY_TENANT_ID"
 
-    # Get a fresh access token
+    # Get a fresh access token k
     access_token = get_access_token(client_id, client_secret, tenant_id)
 
     # Now you can use the access_token in your Microsoft Graph API request
